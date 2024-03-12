@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: 20.x
 
+      - name: install angular
+         run: install @angular/cli
+         
       - name: Installing NPM packages
         run: npm ci
 
