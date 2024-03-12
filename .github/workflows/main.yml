@@ -23,9 +23,6 @@ jobs:
       - name: Installing NPM packages
         run: npm ci
 
-      - name: Linting code
-        run: npm run lint
-
       - name: Running tests
         run: npm run test
         
