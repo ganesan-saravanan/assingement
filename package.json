@@ -1,33 +1,20 @@
 {
-  "name": "github-actions",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "test": "vitest"
+    "start": "nodemon app.js"
   },
+  "license": "MIT",
+  "private": false,
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^14.2.1",
-    "@types/react": "^18.2.56",
-    "@types/react-dom": "^18.2.19",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
-    "@typescript-eslint/parser": "^7.0.2",
-    "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.56.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "jsdom": "^24.0.0",
-    "typescript": "^5.2.2",
-    "vite": "^5.1.4",
-    "vitest": "^1.3.1"
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15"
   }
 }
