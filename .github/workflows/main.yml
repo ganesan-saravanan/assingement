@@ -30,4 +30,4 @@ jobs:
           path: target/reports  
         
       - name: Building project
-        run: npm run build [client] 
+        run: npm run --prefix /client build 
