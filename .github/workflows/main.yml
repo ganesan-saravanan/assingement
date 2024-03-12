@@ -30,4 +30,4 @@ jobs:
           path: target/reports  
         
       - name: Building project
-        run: cd /home/runner/work/assingement/assingement/server && npm run build 
+        run: npm build [client] 
