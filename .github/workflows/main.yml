@@ -29,6 +29,8 @@ jobs:
           name: test-results
           path: target/reports  
 
+      - name: change path
+        run: cd client
         
       - name: Building project
         run: npm run build --verbose
