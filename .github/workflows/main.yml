@@ -1,0 +1,40 @@
+name: Build and Test React Web Application
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build_test:
+    name: Build and Test React App
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Installing Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20.x
+
+      - name: Installing NPM packages
+        run: npm ci
+
+      - name: Linting code
+        run: npm run lint
+
+      - name: Running tests
+        run: npm run test
+        
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: target/reports  
+
+        
+      - name: Building project
+        run: npm run build
